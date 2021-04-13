@@ -17,13 +17,6 @@ const swaggerDefinition = {
   },
   servers,
   components: {
-    securitySchemes: {
-      cookieAuth: {
-        type: 'apiKey',
-        in: 'header',
-        name: 'token',
-      },
-    },
   },
 };
 
