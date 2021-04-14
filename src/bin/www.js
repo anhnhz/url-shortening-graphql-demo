@@ -84,7 +84,6 @@ function onListening() {
   debug(`Listening on ${bind}`);
 }
 
-
 /**
  * Listen on provided port, on all network interfaces.
  */
