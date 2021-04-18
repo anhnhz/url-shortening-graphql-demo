@@ -8,6 +8,8 @@
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/8f1525b7dc6e4cf88712188bcb55d80d)](https://www.codacy.com/gh/okezieobi/url-shortening-graphql-demo/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=okezieobi/url-shortening-graphql-demo&amp;utm_campaign=Badge_Grade)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/8f1525b7dc6e4cf88712188bcb55d80d)](https://www.codacy.com/gh/okezieobi/url-shortening-graphql-demo/dashboard?utm_source=github.com&utm_medium=referral&utm_content=okezieobi/url-shortening-graphql-demo&utm_campaign=Badge_Coverage)
+
 ## Live app
 
 <https://url-shortening-graphql-demo.herokuapp.com/graphql>
