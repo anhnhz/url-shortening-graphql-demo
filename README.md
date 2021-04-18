@@ -18,4 +18,4 @@
 
 ## Stack
 
-ExpressJS/NodeJS, MongoDB/Mongoose, Jest
+ExpressJS/NodeJS, GraphQL, MongoDB/Mongoose, Jest
