@@ -4,20 +4,17 @@ import { buildSchema } from 'graphql';
 import urlServices from './services';
 
 const schema = buildSchema(`
-  type Mutation {
-    shortenURL(url: String): String
-  }
-
   type Query {
     hello: String
+    shortenURL(link: String!): String
   }
 `);
 
 const root = {
   hello: () => 'Hello world!',
-  shortenURL: async ({ url }) => {
-    const string = await urlServices.createShortURL(url);
-    return string;
+  shortenURL: async ({ link }, { protocol, headers: { host } }) => {
+    const shortId = await urlServices.createShortURL(link);
+    return `${protocol}://${host}/${shortId}`;
   },
 };
 

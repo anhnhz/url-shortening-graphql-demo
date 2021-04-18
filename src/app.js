@@ -1,9 +1,9 @@
-import express, { json, urlencoded } from 'express';
+import express, { Router, json, urlencoded } from 'express';
 import logger from 'morgan';
 import cors from 'cors';
 
 import graphqlMiddleware from './graphql';
-import router from './router';
+import routes from './router';
 
 const app = express();
 
@@ -14,7 +14,7 @@ app.use(urlencoded({ extended: false }));
 
 app.use('/graphql', graphqlMiddleware);
 
-router(app);
+app.use('', routes(Router));
 // eslint-disable-next-line no-unused-vars
 app.use((error, req, res, next) => {
   if (error.status) res.status(error.status).send({ error: error.message });
