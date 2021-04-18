@@ -6,14 +6,14 @@ import urlServices from './services';
 const schema = buildSchema(`
   type Query {
     hello: String
-    shortenURL(link: String!): String
+    shortenURL(url: String!): String
   }
 `);
 
 const root = {
   hello: () => 'Hello world!',
-  shortenURL: async ({ link }, { protocol, headers: { host } }) => {
-    const shortId = await urlServices.createShortURL(link);
+  shortenURL: async ({ url }, { protocol, headers: { host } }) => {
+    const shortId = await urlServices.createShortURL(url);
     return `${protocol}://${host}/${shortId}`;
   },
 };

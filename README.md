@@ -12,7 +12,7 @@
 
 ## Live app
 
-<https://url-shortening-graphql-demo.herokuapp.com/graphql>
+<https://url-shortening-graphql-demo.herokuapp.com/graphiql>
 
 ## Stack
 

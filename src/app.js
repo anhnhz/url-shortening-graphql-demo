@@ -12,7 +12,7 @@ app.use(logger('dev'));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 
-app.use('/graphql', graphqlMiddleware);
+app.use('/graphiql', graphqlMiddleware);
 
 app.use('', routes(Router));
 // eslint-disable-next-line no-unused-vars
