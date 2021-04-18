@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/okezieobi/url-shortening-graphql-demo.svg?branch=main)](https://travis-ci.com/okezieobi/url-shortening-graphql-demo)
 
+[![codacy-coverage-reporter](https://github.com/okezieobi/url-shortening-graphql-demo/actions/workflows/codacy-coverage-reporter.yml/badge.svg)](https://github.com/okezieobi/url-shortening-graphql-demo/actions/workflows/codacy-coverage-reporter.yml)
+
 [![Node.js CI](https://github.com/okezieobi/url-shortening-graphql-demo/actions/workflows/node.js.yml/badge.svg)](https://github.com/okezieobi/url-shortening-graphql-demo/actions/workflows/node.js.yml)
 
 [![Coverage Status](https://coveralls.io/repos/github/okezieobi/url-shortening-graphql-demo/badge.svg?branch=main)](https://coveralls.io/github/okezieobi/url-shortening-graphql-demo?branch=main)
