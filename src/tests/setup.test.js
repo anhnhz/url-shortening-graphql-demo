@@ -4,7 +4,7 @@ import 'jest-extended';
 import models from '../models';
 
 beforeAll(async () => {
-  await models.url.deleteMany();
+  await models.Url.deleteMany();
 });
 
 afterAll(async () => {

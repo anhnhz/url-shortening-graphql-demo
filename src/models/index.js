@@ -5,7 +5,7 @@ import env from '../env';
 import urlSchema from './url';
 
 const models = {
-  url: model('URL', urlSchema(Schema)),
+  Url: model('URL', urlSchema(Schema)),
 };
 mongoose.connect(env.databaseURL,
   {
