@@ -1,7 +1,7 @@
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
 
-import urlServices from './services';
+import services from './services';
 
 const schema = buildSchema(`
   type Query {
@@ -13,7 +13,7 @@ const schema = buildSchema(`
 const root = {
   hello: () => 'Hello world!',
   shortenURL: async ({ url }, { protocol, headers: { host } }) => {
-    const shortId = await urlServices.createShortURL(url);
+    const shortId = await services.createShortURL(url);
     return `${protocol}://${host}/${shortId}`;
   },
 };
