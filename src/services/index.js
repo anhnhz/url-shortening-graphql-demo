@@ -12,7 +12,7 @@ export default {
   async createShortURL(arg) {
     const urlExists = await models.Url.findOne({ full: arg }).lean();
     if (urlExists) return urlExists.short;
-    const newURL = await models.url.create({ full: arg });
+    const newURL = await models.Url.create({ full: arg });
     return newURL.short;
   },
 };
