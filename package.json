@@ -7,13 +7,13 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "NODE_ENV=development DEBUG=url-shortening-graphql-demo:* nodemon --exec babel-node src/bin/www.js",
     "release": "npm run clean && npm run build-app && npm run start",
     "clean": "rm -rf dist && mkdir dist",
     "build": "npm run clean && npm run build-app",
     "build-app": "babel src -s -d dist",
-    "start": "node dist/bin/www.js",
-    "test": "NODE_ENV=test jest src/tests/index.test.js",
+    "dev": "nodemon src/bin/www.js",
+    "start": "node src/bin/www.js",
+    "test": "cross-env NODE_ENV=test jest src/tests/index.test.js",
     "coverage": "npm run test -- '--coverage'",
     "coverage:coveralls": "npm run coverage && coveralls < coverage/lcov.info",
     "coverage:codacy": "npm run coverage && cp -R coverage .github/workflows/coverage/"
@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/register": "^7.11.5",
     "coveralls": "^3.1.0",
+    "cross-env": "^10.0.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",

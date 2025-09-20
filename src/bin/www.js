@@ -6,10 +6,10 @@
  */
 
 import { createServer } from 'http';
+import app from '../app.js';
+import debugPkg from 'debug';
 
-import app from '../app';
-
-const debug = require('debug')('url-shortening-graphql-demo:server');
+const debug = debugPkg('url-shortening-graphql-demo:server');
 
 /**
  * Normalize a port into a number, string, or false.
@@ -82,6 +82,7 @@ function onListening() {
     ? `pipe ${addr}`
     : `port ${addr.port}`;
   debug(`Listening on ${bind}`);
+  console.log(`Server running on port ${port}`);
 }
 
 /**

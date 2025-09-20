@@ -1,7 +1,7 @@
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
 
-import services from './services';
+import services from './services/index.js';
 
 const schema = buildSchema(`
   type Query {

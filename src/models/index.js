@@ -1,12 +1,14 @@
 /* eslint-disable no-console */
-import mongoose, { Schema, model } from 'mongoose';
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
 
-import env from '../env';
-import urlSchema from './url';
+import env from '../env.js';
+import urlSchema from './url.js';
 
 const models = {
   Url: model('URL', urlSchema(Schema)),
 };
+
 mongoose.connect(env.databaseURL,
   {
     useNewUrlParser: true,
@@ -14,6 +16,7 @@ mongoose.connect(env.databaseURL,
     useFindAndModify: false,
     useCreateIndex: true,
   });
+
 const db = mongoose.connection;
 
 const databaseSetup = () => {

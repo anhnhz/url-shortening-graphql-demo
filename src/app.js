@@ -2,8 +2,8 @@ import express, { Router, json, urlencoded } from 'express';
 import logger from 'morgan';
 import cors from 'cors';
 
-import graphqlMiddleware from './graphql';
-import routes from './router';
+import graphqlMiddleware from './graphql.js';
+import routes from './router.js';
 
 const app = express();
 

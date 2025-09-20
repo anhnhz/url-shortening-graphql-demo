@@ -1,5 +1,5 @@
-import models from '../models';
-import CustomError from './error';
+import models from '../models/index.js';
+import CustomError from './error.js';
 
 export default {
   async getURL(arg) {
